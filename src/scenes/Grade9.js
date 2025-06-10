@@ -11,11 +11,11 @@ export class Grade9 extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('background', 'public/assets/background.jpg');
-        this.load.image('panel', 'public/assets/icon.png');
-        this.load.image('button', 'public/assets/icon.png');
-        this.load.image('chapter_icon', 'public/assets/icon.png');
-        this.load.image('lesson_icon', 'public/assets/icon.png');
+        this.load.image('background', '/assets/background.jpg');
+        this.load.image('panel', '/assets/icon.png');
+        this.load.image('button', '/assets/icon.png');
+        this.load.image('chapter_icon', '/assets/icon.png');
+        this.load.image('lesson_icon', '/assets/icon.png');
     }
 
     create() {

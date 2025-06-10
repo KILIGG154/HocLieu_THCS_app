@@ -7,8 +7,8 @@ export class Introduction extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('background', 'public/assets/background.jpg');
-        this.load.image('board', 'public/assets/icon.png'); // Tải hình ảnh bảng
+        this.load.image('background', '/assets/background.jpg');
+        this.load.image('board', '/assets/icon.png'); // Tải hình ảnh bảng
         this.scale.on('resize', this.resize, this);
     }
 
