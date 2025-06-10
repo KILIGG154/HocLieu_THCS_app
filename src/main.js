@@ -1,10 +1,6 @@
-import { Boot } from './scenes/Boot';
-import { ClickerGame } from './scenes/ClickerGame';
-import { Game } from 'phaser';
-import { GameOver } from './scenes/GameOver';
-import { MainMenu } from './scenes/MainMenu';
-import { Preloader } from './scenes/Preloader';
-
+import Phaser from 'phaser';
+import { Introduction } from "./scenes/Introduction";
+import { Grade9 } from "./scenes/Grade9";
 //  Find out more information about the Game Config at: https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config = {
     type: Phaser.AUTO,
@@ -23,12 +19,9 @@ const config = {
         }
     },
     scene: [
-        Boot,
-        Preloader,
-        MainMenu,
-        ClickerGame,
-        GameOver
+        Introduction,
+        Grade9
     ]
 };
 
-export default new Game(config);
+export default new Phaser.Game(config);
