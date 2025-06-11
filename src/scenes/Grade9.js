@@ -100,14 +100,39 @@ export class Grade9 extends Phaser.Scene {
                 chapter.lessons.forEach((lesson, lidx) => {
                     const lessonText = this.add.text(170, y, lesson.title, {
                         font: '20px Arial',
-                        color: '#007bff',
+                        color: lesson.title === 'Căn bậc 2' ? '#ff4500' : '#007bff', // Màu đặc biệt cho "Căn bậc 2"
                         fontStyle: 'underline',
                         align: 'left'
                     })
                     .setInteractive({ useHandCursor: true })
                     .on('pointerdown', () => {
-                        this.scene.start('IntroMathC1L1', { lesson });
+                        this.cameras.main.fade(500, 0, 0, 0); // Hiệu ứng mờ khi chuyển scene
+                        this.time.delayedCall(500, () => {
+                            this.scene.start('IntroMathC1L1', { lesson });
+                        });
                     });
+
+                    // Hiệu ứng hover cho văn bản bài học
+                    lessonText.on('pointerover', () => {
+                        lessonText.setStyle({ color: '#ffaa00' });
+                        this.tweens.add({
+                            targets: lessonText,
+                            scaleX: 1.05,
+                            scaleY: 1.05,
+                            duration: 100
+                        });
+                    });
+
+                    lessonText.on('pointerout', () => {
+                        lessonText.setStyle({ color: lesson.title === 'Căn bậc 2' ? '#ff4500' : '#007bff' });
+                        this.tweens.add({
+                            targets: lessonText,
+                            scaleX: 1,
+                            scaleY: 1,
+                            duration: 100
+                        });
+                    });
+
                     content.add(lessonText);
 
                     y += lessonText.height + lessonDescSpacing;
