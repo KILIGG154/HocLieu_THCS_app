@@ -7,8 +7,8 @@
       "title": "Căn bậc hai. Căn thức bậc hai",
       "description": "Giới thiệu về căn bậc hai, căn thức bậc hai và các phép biến đổi liên quan.",
       "lessons": [
-        { "lessonId": "C1L1", "title": "Căn bậc hai", "description": "Khái niệm căn bậc hai và tính chất." },
-        { "lessonId": "C1L2", "title": "Hằng đẳng thức và biểu thức chứa căn", "description": "Áp dụng hằng đẳng thức để rút gọn biểu thức chứa căn." },
+        { "lessonId": "C1L1", "title": "Căn bậc 2", "description": "Khái niệm căn bậc hai và tính chất." },
+        { "lessonId": "C1L2", "title": "Hằng đẳng thức", "description": "Khái niệm và công thức của các hằng đẳng thức" },
         { "lessonId": "C1L3", "title": "Liên hệ giữa phép nhân và phép khai phương", "description": "Tính chất nhân căn bậc hai và áp dụng." }
       ]
     },

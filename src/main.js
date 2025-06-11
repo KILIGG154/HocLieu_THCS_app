@@ -2,6 +2,9 @@ import Phaser from 'phaser';
 import { Introduction } from "./scenes/Introduction";
 import { Grade9 } from "./scenes/Grade9";
 import { IntroMathC1L1 } from './scenes/IntroMathC1L1';
+import { IntroMathC1L2 } from './scenes/IntroMathC1L2';
+import { IntroMathC1L3 } from './scenes/IntroMathC1L3';
+
 //  Find out more information about the Game Config at: https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config = {
     type: Phaser.AUTO,
@@ -25,7 +28,9 @@ const config = {
     scene: [
         Introduction,
         Grade9,
-        IntroMathC1L1
+        IntroMathC1L1,
+        IntroMathC1L2,
+        IntroMathC1L3
     ]
 };
 

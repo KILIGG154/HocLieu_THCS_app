@@ -98,43 +98,57 @@ export class Grade9 extends Phaser.Scene {
 
                 // Danh sách bài học
                 chapter.lessons.forEach((lesson, lidx) => {
+                    let navTarget = null;
+                    let color = '#007bff';
+                    let hoverColor = '#ffaa00';
+                    let font = '20px Arial';
+                    if (lesson.title === 'Căn bậc 2') {
+                        navTarget = 'IntroMathC1L1';
+                        color = '#ff4500';
+                        font = 'bold 22px Arial';
+                    } else if (lesson.title === 'Hằng đẳng thức') {
+                        navTarget = 'IntroMathC1L2';
+                        color = '#2e8b57';
+                        font = 'bold 22px Arial';
+                    } else if (lesson.title === 'Liên hệ giữa phép nhân và phép khai phương') {
+                        navTarget = 'IntroMathC1L3';
+                        color = '#1976d2';
+                        font = 'bold 22px Arial';
+                    }
                     const lessonText = this.add.text(170, y, lesson.title, {
-                        font: '20px Arial',
-                        color: lesson.title === 'Căn bậc 2' ? '#ff4500' : '#007bff', // Màu đặc biệt cho "Căn bậc 2"
+                        font: font,
+                        color: color,
                         fontStyle: 'underline',
                         align: 'left'
-                    })
-                    .setInteractive({ useHandCursor: true })
-                    .on('pointerdown', () => {
-                        this.cameras.main.fade(500, 0, 0, 0); // Hiệu ứng mờ khi chuyển scene
-                        this.time.delayedCall(500, () => {
-                            this.scene.start('IntroMathC1L1', { lesson });
-                        });
                     });
-
-                    // Hiệu ứng hover cho văn bản bài học
-                    lessonText.on('pointerover', () => {
-                        lessonText.setStyle({ color: '#ffaa00' });
-                        this.tweens.add({
-                            targets: lessonText,
-                            scaleX: 1.05,
-                            scaleY: 1.05,
-                            duration: 100
+                    if (navTarget) {
+                        lessonText.setInteractive({ useHandCursor: true })
+                        .on('pointerdown', () => {
+                            this.cameras.main.fade(500, 0, 0, 0);
+                            this.time.delayedCall(500, () => {
+                                this.scene.start(navTarget, { lesson });
+                            });
+                        })
+                        .on('pointerover', () => {
+                            lessonText.setStyle({ color: hoverColor });
+                            this.tweens.add({
+                                targets: lessonText,
+                                scaleX: 1.08,
+                                scaleY: 1.08,
+                                duration: 100
+                            });
+                        })
+                        .on('pointerout', () => {
+                            lessonText.setStyle({ color: color });
+                            this.tweens.add({
+                                targets: lessonText,
+                                scaleX: 1,
+                                scaleY: 1,
+                                duration: 100
+                            });
                         });
-                    });
-
-                    lessonText.on('pointerout', () => {
-                        lessonText.setStyle({ color: lesson.title === 'Căn bậc 2' ? '#ff4500' : '#007bff' });
-                        this.tweens.add({
-                            targets: lessonText,
-                            scaleX: 1,
-                            scaleY: 1,
-                            duration: 100
-                        });
-                    });
-
+                    }
                     content.add(lessonText);
-
                     y += lessonText.height + lessonDescSpacing;
 
                     const lessonDesc = this.add.text(190, y, lesson.description, {
@@ -143,7 +157,6 @@ export class Grade9 extends Phaser.Scene {
                         wordWrap: { width: this.scale.width - 240 }
                     });
                     content.add(lessonDesc);
-
                     y += lessonDesc.height + lessonSpacing;
                 });
 
