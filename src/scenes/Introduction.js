@@ -81,7 +81,7 @@ export class Introduction extends Phaser.Scene {
                     icon.clearTint();
                 });
                 icon.on('pointerdown', () => {
-                    this.load.json('hoclieu', 'hoclieu.json');
+                    this.load.json('hoclieu', '/hoclieu.json');
                     this.load.once('complete', () => {
                         const hoclieuData = this.cache.json.get('hoclieu');
                         this.router.goTo('grade9', { hoclieu: hoclieuData });

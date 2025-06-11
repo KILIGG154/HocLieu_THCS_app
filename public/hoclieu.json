@@ -1,0 +1,36 @@
+{
+  "subject": "Toán lớp 9",
+  "grade": 9,
+  "chapters": [
+    {
+      "chapterId": "C1",
+      "title": "Căn bậc hai. Căn thức bậc hai",
+      "description": "Giới thiệu về căn bậc hai, căn thức bậc hai và các phép biến đổi liên quan.",
+      "lessons": [
+        { "lessonId": "C1L1", "title": "Căn bậc hai", "description": "Khái niệm căn bậc hai và tính chất." },
+        { "lessonId": "C1L2", "title": "Hằng đẳng thức và biểu thức chứa căn", "description": "Áp dụng hằng đẳng thức để rút gọn biểu thức chứa căn." },
+        { "lessonId": "C1L3", "title": "Liên hệ giữa phép nhân và phép khai phương", "description": "Tính chất nhân căn bậc hai và áp dụng." }
+      ]
+    },
+    {
+      "chapterId": "C2",
+      "title": "Hàm số bậc nhất và bậc hai",
+      "description": "Nghiên cứu về hàm số bậc nhất và hàm số bậc hai, đồ thị và tính chất.",
+      "lessons": [
+        { "lessonId": "C2L1", "title": "Ôn tập hàm số bậc nhất", "description": "Củng cố kiến thức về hàm số bậc nhất." },
+        { "lessonId": "C2L2", "title": "Hàm số bậc hai", "description": "Định nghĩa, đồ thị và tính chất của hàm số bậc hai." },
+        { "lessonId": "C2L3", "title": "Vẽ đồ thị hàm số bậc hai", "description": "Phương pháp xác định và vẽ đồ thị." }
+      ]
+    },
+    {
+      "chapterId": "C3",
+      "title": "Hệ phương trình bậc nhất hai ẩn",
+      "description": "Giải và ứng dụng hệ phương trình bậc nhất hai ẩn trong thực tiễn.",
+      "lessons": [
+        { "lessonId": "C3L1", "title": "Giải hệ phương trình bằng phương pháp thế", "description": "Phương pháp giải hệ bằng cách thế một ẩn." },
+        { "lessonId": "C3L2", "title": "Giải hệ phương trình bằng phương pháp cộng đại số", "description": "Dùng phép cộng trừ để khử ẩn." },
+        { "lessonId": "C3L3", "title": "Ứng dụng hệ phương trình", "description": "Vận dụng giải bài toán thực tế bằng hệ phương trình." }
+      ]
+    }
+  ]
+}

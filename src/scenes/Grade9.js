@@ -57,70 +57,72 @@ export class Grade9 extends Phaser.Scene {
             }).setOrigin(0.5, 0);
             
             let y = 150;
-            
-            // Danh sách chương
+            const chapterSpacing = 60; // khoảng cách giữa các chương
+            const lessonSpacing = 38;  // khoảng cách giữa các bài học
+            const lessonDescSpacing = 8; // khoảng cách giữa tiêu đề và mô tả bài học
+
             this.hoclieu.chapters.forEach((chapter, idx) => {
                 // Icon và tiêu đề chương
                 const chapterIcon = this.add.image(100, y, 'chapter_icon')
                     .setDisplaySize(30, 30)
                     .setOrigin(0.5);
                 content.add(chapterIcon);
-                
-                const chapterTitle = this.add.text(130, y - 15, `Chương ${idx + 1}: ${chapter.title}`, {
+
+                const chapterTitle = this.add.text(140, y - 10, `Chương ${idx + 1}: ${chapter.title}`, {
                     font: 'bold 22px Arial',
                     color: '#005',
-                    wordWrap: { width: this.scale.width - 200 }
+                    wordWrap: { width: this.scale.width - 220 }
                 }).setOrigin(0, 0);
                 content.add(chapterTitle);
-                
-                y += 35;
-                
+
+                y += 28;
+
                 // Mô tả chương
-                const chapterDesc = this.add.text(130, y, chapter.description, {
+                const chapterDesc = this.add.text(140, y, chapter.description, {
                     font: '18px Arial',
                     color: '#333',
-                    wordWrap: { width: this.scale.width - 200 }
+                    wordWrap: { width: this.scale.width - 220 }
                 });
                 content.add(chapterDesc);
-                
-                y += chapterDesc.height + 20;
-                
+
+                y += chapterDesc.height + 12;
+
                 // Tiêu đề bài học
-                const lessonTitle = this.add.text(130, y, 'Bài học:', {
+                const lessonTitle = this.add.text(140, y, 'Bài học:', {
                     font: 'bold 20px Arial',
                     color: '#0a5'
                 });
                 content.add(lessonTitle);
-                
-                y += 30;
-                
+
+                y += 28;
+
                 // Danh sách bài học
                 chapter.lessons.forEach((lesson, lidx) => {
-                    const lessonIcon = this.add.image(150, y, 'lesson_icon')
-                        .setDisplaySize(20, 20)
-                        .setOrigin(0.5);
-                    content.add(lessonIcon);
-                    
-                    const lessonText = this.add.text(170, y - 10, `${lesson.title}`, {
-                        font: 'bold 18px Arial',
-                        color: '#222',
-                        wordWrap: { width: this.scale.width - 220 }
+                    const lessonText = this.add.text(170, y, lesson.title, {
+                        font: '20px Arial',
+                        color: '#007bff',
+                        fontStyle: 'underline',
+                        align: 'left'
+                    })
+                    .setInteractive({ useHandCursor: true })
+                    .on('pointerdown', () => {
+                        this.scene.start('IntroMathC1L1', { lesson });
                     });
                     content.add(lessonText);
-                    
-                    y += 22;
-                    
-                    const lessonDesc = this.add.text(170, y - 10, lesson.description, {
+
+                    y += lessonText.height + lessonDescSpacing;
+
+                    const lessonDesc = this.add.text(190, y, lesson.description, {
                         font: '16px Arial',
                         color: '#444',
-                        wordWrap: { width: this.scale.width - 220 }
+                        wordWrap: { width: this.scale.width - 240 }
                     });
                     content.add(lessonDesc);
-                    
-                    y += lessonDesc.height + 15;
+
+                    y += lessonDesc.height + lessonSpacing;
                 });
-                
-                y += 20;
+
+                y += chapterSpacing;
             });
             
             // Nút cuộn
