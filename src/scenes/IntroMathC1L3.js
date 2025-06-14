@@ -298,6 +298,12 @@ export class IntroMathC1L3 extends Phaser.Scene {
                 padding: { left: 24, right: 24, top: 18, bottom: 18 }, align: 'center', fontStyle: 'bold', borderRadius: 16,
                 shadow: { offsetX: 2, offsetY: 2, color: '#222', blur: 6, fill: true }, lineSpacing: 10
             }).setOrigin(0.5);
+            // Tự động chuyển về trang Grade9 sau 2 giây
+            this.time.delayedCall(2000, () => {
+                if (this.scene && this.scene.manager) {
+                    this.scene.start('Grade9');
+                }
+            });
         };
     }
 }

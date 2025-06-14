@@ -114,6 +114,14 @@ export class Grade9 extends Phaser.Scene {
                         navTarget = 'IntroMathC1L3';
                         color = '#1976d2';
                         font = 'bold 22px Arial';
+                    } else if (lesson.title === 'Ôn tập hàm số bậc nhất') {
+                        navTarget = 'LinearEquation';
+                        color = '#8e44ad';
+                        font = 'bold 22px Arial';
+                    } else if (chapter.title.includes('Lịch sử') || lesson.title === 'Lịch sử') {
+                        navTarget = 'Grade8';
+                        color = '#1976d2';
+                        font = 'bold 22px Arial';
                     }
                     const lessonText = this.add.text(170, y, lesson.title, {
                         font: font,

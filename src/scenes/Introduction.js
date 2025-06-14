@@ -89,6 +89,37 @@ export class Introduction extends Phaser.Scene {
                     });
                     this.load.start();
                 });
+            } else if (data.label === 'Khối 8') {
+                 icon.on('pointerover', () => {
+                    this.tweens.add({
+                        targets: icon,
+                        scale: 1.18,
+                        duration: 180,
+                        ease: 'Back.Out',
+                        yoyo: true,
+                        repeat: -1
+                    });
+                    icon.setTint(0xffe066);
+                });
+                icon.on('pointerout', () => {
+                    this.tweens.killTweensOf(icon);
+                    this.tweens.add({
+                        targets: icon,
+                        scale: 1,
+                        duration: 180,
+                        ease: 'Back.Out',
+                    });
+                    icon.clearTint();
+                });
+                icon.on('pointerdown', () => {
+                    this.load.json('lichsu', '/lichsu.json');
+                    this.load.once('complete', () => {
+                        const lichsuData = this.cache.json.get('lichsu');
+                        this.router.goTo('grade8', { lichsu: lichsuData });
+                        this.scene.stop();
+                    });
+                    this.load.start();
+                });
             }
         });
         this.iconY = iconY;

@@ -144,6 +144,12 @@ export class IntroMathC1L2 extends Phaser.Scene {
                 shadow: { offsetX: 2, offsetY: 2, color: '#222', blur: 6, fill: true },
                 lineSpacing: 10
             }).setOrigin(0.5);
+            // Tự động chuyển về trang introduction sau 2 giây
+            this.time.delayedCall(2000, () => {
+                if (this.scene && this.scene.manager) {
+                    this.scene.start('Grade9');
+                }
+            });
             return;
         }
 

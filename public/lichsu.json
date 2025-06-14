@@ -1,0 +1,64 @@
+{
+  "subject": "Lịch sử",
+  "grade": "THCS",
+  "chapters": [
+    {
+      "chapterId": "ls1",
+      "title": "Lịch sử thế giới cổ đại",
+      "lessons": [
+        {
+          "lessonId": "ls1.1",
+          "title": "Các quốc gia cổ đại phương Đông",
+          "summary": "Tìm hiểu về sự hình thành và phát triển của các quốc gia cổ đại như Ai Cập, Lưỡng Hà, Ấn Độ, Trung Quốc, cùng những đặc điểm về kinh tế, xã hội và văn hoá."
+        },
+        {
+          "lessonId": "ls1.2",
+          "title": "Các quốc gia cổ đại phương Tây",
+          "summary": "Giới thiệu về Hy Lạp và La Mã cổ đại: thành tựu văn hóa, tổ chức nhà nước, chiến tranh và ảnh hưởng lâu dài tới thế giới."
+        }
+      ]
+    },
+    {
+      "chapterId": "ls2",
+      "title": "Việt Nam từ thời nguyên thủy đến thế kỷ X",
+      "lessons": [
+        {
+          "lessonId": "ls2.1",
+          "title": "Thời nguyên thủy trên đất nước ta",
+          "summary": "Khám phá đời sống người nguyên thủy ở Việt Nam qua các nền văn hóa như Hòa Bình, Bắc Sơn, Đông Sơn."
+        },
+        {
+          "lessonId": "ls2.2",
+          "title": "Thời kỳ dựng nước và giữ nước đầu tiên",
+          "summary": "Giới thiệu các quốc gia Văn Lang, Âu Lạc, cuộc kháng chiến chống Triệu Đà và vai trò của An Dương Vương."
+        },
+        {
+          "lessonId": "ls2.3",
+          "title": "Chống Bắc thuộc và giành độc lập",
+          "summary": "Quá trình hơn 1000 năm Bắc thuộc và các cuộc khởi nghĩa tiêu biểu như Hai Bà Trưng, Bà Triệu, Lý Bí, Khúc Thừa Dụ."
+        }
+      ]
+    },
+    {
+      "chapterId": "ls3",
+      "title": "Thời kỳ phong kiến Việt Nam",
+      "lessons": [
+        {
+          "lessonId": "ls3.1",
+          "title": "Nhà nước phong kiến đầu tiên: Nhà Ngô - Nhà Lý",
+          "summary": "Tìm hiểu quá trình củng cố độc lập, xây dựng nhà nước trung ương tập quyền đầu tiên."
+        },
+        {
+          "lessonId": "ls3.2",
+          "title": "Các cuộc kháng chiến chống xâm lược phương Bắc",
+          "summary": "Những chiến công chống Tống, Nguyên - Mông, Minh với các danh tướng như Lý Thường Kiệt, Trần Hưng Đạo, Lê Lợi."
+        },
+        {
+          "lessonId": "ls3.3",
+          "title": "Kinh tế, văn hoá thời phong kiến",
+          "summary": "Phân tích sự phát triển của nông nghiệp, thủ công nghiệp, thương nghiệp và văn hoá thời Lý, Trần, Lê."
+        }
+      ]
+    }
+  ]
+}
