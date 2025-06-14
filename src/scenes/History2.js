@@ -50,8 +50,8 @@ export class History2 extends Phaser.Scene {
             const chatBox = document.createElement('div');
             chatBox.id = 'phaser-chatbox';
             chatBox.style.position = 'fixed';
-            chatBox.style.right = '100px';
-            chatBox.style.bottom = '60px';
+            chatBox.style.right = '240px';
+            chatBox.style.bottom = '80px';
             chatBox.style.width = '320px';
             chatBox.style.height = '380px';
             chatBox.style.background = '#fff';
