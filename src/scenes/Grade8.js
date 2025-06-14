@@ -81,12 +81,20 @@ export class Grade8 extends Phaser.Scene {
                        content.add(lessonText);
                        // Thêm sự kiện chuyển scene nếu là bài "Các quốc gia cổ đại phương Đông"
                        if (lesson.title === 'Các quốc gia cổ đại phương Đông') {
-        lessonText.setInteractive({ useHandCursor: true });
-        lessonText.on('pointerdown', () => {
-            this.router.goTo('history1', { lesson, lichsu });
-            this.scene.stop();
-        });
-    }
+                           lessonText.setInteractive({ useHandCursor: true });
+                           lessonText.on('pointerdown', () => {
+                               this.router.goTo('history1', { lesson, lichsu });
+                               this.scene.stop();
+                           });
+                       }
+                       // Thêm sự kiện chuyển scene nếu là bài "Các quốc gia cổ đại phương Tây"
+                       if (lesson.title === 'Các quốc gia cổ đại phương Tây') {
+                           lessonText.setInteractive({ useHandCursor: true });
+                           lessonText.on('pointerdown', () => {
+                               this.router.goTo('history2', { lesson, lichsu });
+                               this.scene.stop();
+                           });
+                       }
                        y += lessonText.height + lessonDescSpacing;
                        const lessonDesc = this.add.text(190, y, lesson.summary || '', {
                            font: '16px Arial',

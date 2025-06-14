@@ -15,7 +15,7 @@ export class LinearEquation extends Phaser.Scene {
 
         // Tạo một ô nhập LaTeX bằng HTML DOM Element
         this.latexInput = this.add.dom(512, 200, 'input', 'width:400px; height:36px; font-size:22px; padding:6px; border-radius:8px; border:1px solid #1976d2;', '');
-        this.latexInput.node.placeholder = 'Nhập công thức LaTeX ở đây...';
+        this.latexInput.node.placeholder = 'Nhập công thức hàm số bậc nhất ở đây...';
 
         // Tạo một vùng canvas để vẽ biểu đồ
         this.chartBg = this.add.rectangle(512, 420, 500, 320, 0xf8f8ff, 0.98).setStrokeStyle(2, 0x1976d2).setOrigin(0.5);
