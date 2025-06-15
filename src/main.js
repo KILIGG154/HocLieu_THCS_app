@@ -7,7 +7,8 @@ import { IntroMathC1L2 } from './scenes/IntroMathC1L2';
 import { IntroMathC1L3 } from './scenes/IntroMathC1L3';
 import { LinearEquation } from './scenes/LinearEquation';
 import { History1 } from './scenes/History1';
-import { History2 } from './scenes/History2';      
+import { History2 } from './scenes/History2';  
+import { QuadraticFunction } from './scenes/QuadraticFunction';    
 //  Find out more information about the Game Config at: https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config = {
     type: Phaser.AUTO,
@@ -37,7 +38,8 @@ const config = {
         LinearEquation,
         Grade8,
         History1,
-        History2
+        History2,
+        QuadraticFunction
     ]
 };
 

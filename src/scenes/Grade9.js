@@ -118,6 +118,14 @@ export class Grade9 extends Phaser.Scene {
                         navTarget = 'LinearEquation';
                         color = '#8e44ad';
                         font = 'bold 22px Arial';
+                    } else if (lesson.title === 'Hàm số bậc hai') {
+                        navTarget = 'QuadraticFunction';
+                        color = '#1976d2';
+                        font = 'bold 22px Arial';
+                    } else if (lesson.title === 'Vẽ đồ thị hàm số bậc hai') {
+                        navTarget = null;
+                        color = '#1976d2';
+                        font = 'bold 22px Arial';
                     } else if (chapter.title.includes('Lịch sử') || lesson.title === 'Lịch sử') {
                         navTarget = 'Grade8';
                         color = '#1976d2';
