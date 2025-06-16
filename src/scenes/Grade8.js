@@ -95,6 +95,14 @@ export class Grade8 extends Phaser.Scene {
                                this.scene.stop();
                            });
                        }
+                       // Thêm sự kiện chuyển scene nếu là bài "Thời kỳ dựng nước và giữ nước đầu tiên"
+                       if (lesson.title === 'Thời kỳ dựng nước và giữ nước đầu tiên') {
+                           lessonText.setInteractive({ useHandCursor: true });
+                           lessonText.on('pointerdown', () => {
+                               this.router.goTo('History3', { lesson, lichsu });
+                               this.scene.stop();
+                           });
+                       }
                        y += lessonText.height + lessonDescSpacing;
                        const lessonDesc = this.add.text(190, y, lesson.summary || '', {
                            font: '16px Arial',
