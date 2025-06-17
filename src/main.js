@@ -10,6 +10,7 @@ import { History1 } from './scenes/History1';
 import { History2 } from './scenes/History2';  
 import { QuadraticFunction } from './scenes/QuadraticFunction';    
 import { History3 } from './scenes/History3';
+import { PracticeQuadratic } from './scenes/PracticeQuadratic';
 //  Find out more information about the Game Config at: https://newdocs.phaser.io/docs/3.70.0/Phaser.Types.Core.GameConfig
 const config = {
     type: Phaser.AUTO,
@@ -41,7 +42,8 @@ const config = {
         History1,
         History2,
         QuadraticFunction,
-        History3
+        History3,
+        PracticeQuadratic
     ]
 };
 

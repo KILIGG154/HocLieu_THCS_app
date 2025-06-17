@@ -19,7 +19,7 @@
       "lessons": [
         { "lessonId": "C2L1", "title": "Ôn tập hàm số bậc nhất", "description": "Củng cố kiến thức về hàm số bậc nhất." },
         { "lessonId": "C2L2", "title": "Hàm số bậc hai", "description": "Định nghĩa, đồ thị và tính chất của hàm số bậc hai." },
-        { "lessonId": "C2L3", "title": "Vẽ đồ thị hàm số bậc hai", "description": "Phương pháp xác định và vẽ đồ thị." }
+        { "lessonId": "C2L3", "title": "Ôn tập đồ thị hàm số bậc hai", "description": "Phương pháp xác định và vẽ đồ thị." }
       ]
     },
     {

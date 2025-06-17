@@ -126,6 +126,10 @@ export class Grade9 extends Phaser.Scene {
                         navTarget = null;
                         color = '#1976d2';
                         font = 'bold 22px Arial';
+                    } else if (lesson.title === 'Ôn tập đồ thị hàm số bậc hai') {
+                        navTarget = 'PracticeQuadratic';
+                        color = '#1976d2';
+                        font = 'bold 22px Arial';
                     } else if (chapter.title.includes('Lịch sử') || lesson.title === 'Lịch sử') {
                         navTarget = 'Grade8';
                         color = '#1976d2';
