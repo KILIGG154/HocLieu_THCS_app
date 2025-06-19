@@ -1,13 +1,16 @@
+import { PracticeQuadratic } from '../scenes/PracticeQuadratic';
 export class AppRouter {
     constructor(game) {
         this.game = game;
         // Định nghĩa các route chính của app với URL
         this.routes = {
             introduction: { key: 'Introduction', url: '/introduction' },
-            grade9: { key: 'Grade9', url: '/grade9' },
-            grade6: { key: 'Grade6', url: '/grade6' },
-            grade7: { key: 'Grade7', url: '/grade7' },
-            grade8: { key: 'Grade8', url: '/grade8' },
+            grade9: { key: 'Grade9', url: '/introduction/grade9' },
+            grade6: { key: 'Grade6', url: '/introduction/grade6' },
+            grade7: { key: 'Grade7', url: '/introduction/grade7' },
+            grade8: { key: 'Grade8', url: '/introduction/grade8' },
+            practiceQuadratic: { key: 'PracticeQuadratic', url: '/introduction/grade9/practice-quadratic' },
+            
             home: { key: 'Home', url: '/' }
         };
     }
