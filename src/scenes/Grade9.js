@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { AppRouter } from '../router/AppRouter';
+import { PracticeQuadratic } from './PracticeQuadratic';
 
 export class Grade9 extends Phaser.Scene {
     constructor() {
@@ -146,7 +147,11 @@ export class Grade9 extends Phaser.Scene {
                         .on('pointerdown', () => {
                             this.cameras.main.fade(500, 0, 0, 0);
                             this.time.delayedCall(500, () => {
-                                this.scene.start(navTarget, { lesson });
+                                if (navTarget === 'PracticeQuadratic') {
+                                    this.router.goTo('practiceQuadratic', { lesson });
+                                } else {
+                                    this.scene.start(navTarget, { lesson });
+                                }
                             });
                         })
                         .on('pointerover', () => {
